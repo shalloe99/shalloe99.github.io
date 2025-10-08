@@ -12,10 +12,11 @@ profile:
     <p>B.S. in Statistics</p>
     <p>Texas A & M University</p>
 
-# news: true  # includes a list of news items
-# selected_papers: true # includes a list of papers marked as "selected={true}"
+news: true  # includes a list of news items
+selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
+
 ## Origin
 I was originally born in a beautiful coastal city in southern China and moved to Houston when I attended high school. 
 
@@ -30,5 +31,3 @@ I posted a series of my [projects](/projects/), [research work](/research/), and
 
 ## Art
 I love music and `art` because both can spread a message of inspiration, helping people achieve the betterment of thoughts and life. I have put up some of my best art pieces in the [gallery](/gallery/) and please check it out!
-
-

@@ -1,7 +1,8 @@
 // add bootstrap classes to tables
-$(document).ready(function () {
+document.addEventListener('DOMContentLoaded', function() {
+  if (typeof $ !== 'undefined') {
   $("table").each(function () {
-    if (determineComputedTheme() == "dark") {
+    if (typeof determineComputedTheme !== 'undefined' && determineComputedTheme() == "dark") {
       $(this).addClass("table-dark");
     } else {
       $(this).removeClass("table-dark");
@@ -21,4 +22,5 @@ $(document).ready(function () {
       $(this).addClass("table-hover");
     }
   });
+  }
 });

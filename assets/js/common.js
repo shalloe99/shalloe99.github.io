@@ -1,4 +1,5 @@
-$(document).ready(function () {
+document.addEventListener('DOMContentLoaded', function() {
+  if (typeof $ !== 'undefined') {
   // add toggle functionality to abstract, award and bibtex buttons
   $("a.abstract").click(function () {
     $(this).parent().parent().find(".abstract.hidden").toggleClass("open");
@@ -56,4 +57,5 @@ $(document).ready(function () {
   $('[data-toggle="popover"]').popover({
     trigger: "hover",
   });
+  }
 });

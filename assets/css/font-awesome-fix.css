@@ -1,0 +1,50 @@
+/* Font Awesome Envelope Icon Fix */
+.fa-envelope::before,
+.fa-solid.fa-envelope::before,
+i.fa-envelope::before,
+i.fa-solid.fa-envelope::before {
+  content: "\f0e0" !important;
+  font-family: "Font Awesome 6 Free" !important;
+  font-weight: 900 !important;
+}
+
+/* Light Toggle Icon Centering and Alignment */
+.toggle-container {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+#light-toggle {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  border: none !important;
+  background: transparent !important;
+  border-radius: 50% !important;
+  transition: all 0.3s ease !important;
+  width: 2.5rem !important;
+  height: 2.5rem !important;
+  margin: 0 !important;
+}
+
+#light-toggle:hover {
+  background: rgba(0, 0, 0, 0.1) !important;
+  transform: scale(1.05) !important;
+}
+
+#light-toggle i {
+  font-size: 1.2rem !important;
+  color: inherit !important;
+  line-height: 1 !important;
+}
+
+/* Ensure search and light toggle are visually aligned */
+.nav-item button,
+.toggle-container button {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 2.5rem !important;
+}

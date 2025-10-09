@@ -1,0 +1,31 @@
+<div class="gallery-item" data-category="{{ project.category }}" data-title="{{ project.title }}">
+  {% if project.redirect %}
+  <a href="{{ project.redirect }}" class="gallery-link">
+  {% else %}
+  <a href="{{ project.url | relative_url }}" class="gallery-link">
+  {% endif %}
+    <div class="gallery-card">
+      <div class="gallery-image-container">
+        {% if project.img %}
+          <img src="{{ project.img | relative_url }}" 
+               alt="{{ project.title }}" 
+               class="gallery-image"
+               loading="eager"
+               decoding="sync"
+               fetchpriority="high"
+               style="opacity: 1; transform: translateZ(0); backface-visibility: hidden; width: 100%; height: auto; display: block;">
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-content">
+              <h3 class="gallery-title">{{ project.title }}</h3>
+              <p class="gallery-description">{{ project.description }}</p>
+              <div class="gallery-view-btn">
+                <span>View Details</span>
+                <i class="fa-solid fa-chevron-right"></i>
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </a>
+</div>

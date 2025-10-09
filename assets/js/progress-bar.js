@@ -5,7 +5,10 @@
  * Couple of changes were made to the original code to make it compatible
  * with the `al-foio` theme.
  */
-const progressBar = $("#progress");
+let progressBar;
+if (typeof $ !== 'undefined') {
+  progressBar = $("#progress");
+}
 /*
  * We set up the bar after all elements are done loading.
  * In some cases, if the images in the page are larger than the intended
@@ -16,7 +19,9 @@ const progressBar = $("#progress");
  * values.
  */
 window.onload = function () {
-  setTimeout(progressBarSetup, 50);
+  if (typeof $ !== 'undefined' && progressBar) {
+    setTimeout(progressBarSetup, 50);
+  }
 };
 /*
  * We set up the bar according to the browser.
@@ -24,7 +29,7 @@ window.onload = function () {
  * Otherwise, we resize the bar thru CSS styling
  */
 function progressBarSetup() {
-  if ("max" in document.createElement("progress")) {
+  if (typeof $ !== 'undefined' && progressBar && "max" in document.createElement("progress")) {
     initializeProgressElement();
     $(document).on("scroll", function () {
       progressBar.attr({ value: getCurrentScrollPosition() });

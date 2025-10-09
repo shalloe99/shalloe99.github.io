@@ -1,0 +1,53 @@
+---
+layout: null
+---
+[
+  {% assign first_item = true %}
+  {% for page in site.pages %}
+    {% unless page.url contains '/search.json' or page.url contains '/404.html' or page.url contains '/robots.txt' or page.url contains '.css' or page.url contains '.js' or page.url contains '.map' or page.url contains '/sitemap.xml' or page.url contains '/feed.xml' %}
+      {% unless first_item %},{% endunless %}
+      {
+        "title": "{{ page.title | escape }}",
+        "url": "{{ page.url | relative_url }}",
+        "content": "{{ page.content | strip_html | strip_newlines | escape }}",
+        "category": "{% if page.url == '/' %}About{% elsif page.url contains '/gallery/' %}Gallery{% elsif page.url contains '/projects/' %}Projects{% elsif page.url contains '/research/' %}Research{% elsif page.url contains '/blog/' %}Blog{% elsif page.url contains '/news/' %}News{% elsif page.url contains '/service/' %}Service{% else %}Pages{% endif %}",
+        "type": "page"
+      }
+      {% assign first_item = false %}
+    {% endunless %}
+  {% endfor %}
+  {% for post in site.posts %}
+    {% unless first_item %},{% endunless %}
+    {
+      "title": "{{ post.title | escape }}",
+      "url": "{{ post.url | relative_url }}",
+      "date": "{{ post.date | date_to_string }}",
+      "content": "{{ post.content | strip_html | strip_newlines | escape }}",
+      "category": "Blog",
+      "type": "post"
+    }
+    {% assign first_item = false %}
+  {% endfor %}
+  {% for project in site.projects %}
+    {% unless first_item %},{% endunless %}
+    {
+      "title": "{{ project.title | escape }}",
+      "url": "{{ project.url | relative_url }}",
+      "content": "{{ project.content | strip_html | strip_newlines | escape }}",
+      "category": "Projects",
+      "type": "project"
+    }
+    {% assign first_item = false %}
+  {% endfor %}
+  {% for item in site.gallery %}
+    {% unless first_item %},{% endunless %}
+    {
+      "title": "{{ item.title | escape }}",
+      "url": "{{ item.url | relative_url }}",
+      "content": "{{ item.content | strip_html | strip_newlines | escape }}",
+      "category": "Gallery",
+      "type": "gallery"
+    }
+    {% assign first_item = false %}
+  {% endfor %}
+]

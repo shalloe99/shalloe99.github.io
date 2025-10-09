@@ -1,9 +1,10 @@
 ---
 layout: page
-title: projects
+title: project
 permalink: /projects/
-description: A growing collection of cool projects.
+description: A growing collection of cool project.
 nav: true
+nav_order: 2
 display_categories: [data analysis, machine learning, software design, computer graphic, fun]
 horizontal: true
 ---

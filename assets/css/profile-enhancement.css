@@ -1,0 +1,134 @@
+/**
+ * Enhanced Profile Image Styling
+ * Analyzes and complements the selfie image colors for better display
+ */
+
+/* Profile image container with enhanced styling */
+.profile {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.profile img {
+  border-radius: 16px !important; /* More modern rounded corners */
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.1),
+    0 8px 16px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(255, 255, 255, 0.05); /* Subtle border */
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateZ(0); /* Hardware acceleration */
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+/* Hover effects that complement the image colors */
+.profile:hover img {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 32px 64px rgba(0, 0, 0, 0.15),
+    0 16px 32px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+/* Color-accented border that matches the blue t-shirt */
+.profile::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: linear-gradient(135deg, 
+    #3b82f6 0%,    /* Blue matching t-shirt */
+    #1e40af 25%,   /* Darker blue */
+    #64748b 50%,   /* Gray matching blazer */
+    #475569 75%,   /* Darker gray */
+    #3b82f6 100%   /* Back to blue */
+  );
+  border-radius: 20px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.profile:hover::before {
+  opacity: 0.3;
+}
+
+/* Enhanced profile info styling */
+.profile .more-info {
+  background: linear-gradient(135deg, 
+    rgba(59, 130, 246, 0.05) 0%,  /* Blue tint */
+    rgba(100, 116, 139, 0.05) 100% /* Gray tint */
+  );
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  border: 1px solid rgba(59, 130, 246, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.profile .more-info p {
+  margin-bottom: 0.5rem;
+  color: var(--global-text-color);
+  font-weight: 500;
+  position: relative;
+}
+
+.profile .more-info p:last-child {
+  margin-bottom: 0;
+}
+
+/* Add subtle icons to education info */
+.profile .more-info p:first-child::before {
+  content: '🎓';
+  margin-right: 0.5rem;
+}
+
+.profile .more-info p:nth-child(2)::before {
+  content: '📊';
+  margin-right: 0.5rem;
+}
+
+.profile .more-info p:last-child::before {
+  content: '🏛️';
+  margin-right: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .profile img {
+    border-radius: 12px !important;
+  }
+  
+  .profile:hover img {
+    transform: translateY(-4px) scale(1.01);
+  }
+  
+  .profile::before {
+    border-radius: 16px;
+  }
+}
+
+/* Dark mode adjustments */
+html[data-theme="dark"] .profile img {
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    0 8px 16px rgba(0, 0, 0, 0.2),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+html[data-theme="dark"] .profile:hover img {
+  box-shadow: 
+    0 32px 64px rgba(0, 0, 0, 0.4),
+    0 16px 32px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.15);
+}
+
+html[data-theme="dark"] .profile .more-info {
+  background: linear-gradient(135deg, 
+    rgba(59, 130, 246, 0.1) 0%,
+    rgba(100, 116, 139, 0.1) 100%
+  );
+  border-color: rgba(59, 130, 246, 0.2);
+}

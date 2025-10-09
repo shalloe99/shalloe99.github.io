@@ -1,4 +1,5 @@
-$(document).ready(function () {
+document.addEventListener('DOMContentLoaded', function() {
+  if (typeof $ !== 'undefined') {
   // Let external links in jupyter notebooks open in new tab
   let jupyterNotebooks = $(".jupyter-notebook-iframe-container");
   jupyterNotebooks.each(function () {
@@ -15,4 +16,5 @@ $(document).ready(function () {
       }
     });
   });
+  }
 });

@@ -2,7 +2,7 @@
  * Styles for the base elements of the theme.
  ******************************************************************************/
 
-// Typography
+// Typography - Apply monospace fonts to all text elements
 
 p,
 h1,
@@ -15,8 +15,370 @@ em,
 div,
 li,
 span,
-strong {
+strong,
+a,
+button,
+input,
+textarea,
+label,
+th,
+td,
+blockquote,
+pre,
+code,
+kbd,
+samp,
+small,
+sub,
+sup,
+mark,
+del,
+ins,
+abbr,
+dfn,
+time,
+var,
+cite,
+q,
+s,
+u,
+b,
+i,
+address,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section,
+summary {
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace !important;
   color: var(--global-text-color);
+}
+
+// Additional monospace font rules for comprehensive coverage
+* {
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace !important;
+}
+
+// Exclude icon fonts from monospace styling
+i[class*="fa-"],
+i[class*="fas"],
+i[class*="far"],
+i[class*="fab"],
+i[class*="fal"],
+i[class*="fad"],
+i[class*="ai-"],
+i[class*="si-"],
+i[class*="ti-"],
+i[class*="tabler-"],
+i[class*="icon-"],
+.material-icons,
+.icon,
+.fa,
+.fas,
+.far,
+.fab,
+.fal,
+.fad,
+.ai,
+.si,
+.ti,
+.tabler-icon {
+  font-family: inherit !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  line-height: 1 !important;
+  letter-spacing: normal !important;
+  word-wrap: normal !important;
+  white-space: nowrap !important;
+  direction: ltr !important;
+}
+
+// Specific Font Awesome fixes
+.fa-solid,
+.fa-brands,
+.fa-regular,
+.fa-light,
+.fa-thin,
+.fa-envelope,
+.fa-github,
+.fa-linkedin {
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+  font-style: normal !important;
+  font-weight: 900 !important; // Solid icons need weight 900
+}
+
+.fa-brands {
+  font-weight: 400 !important; // Brand icons need weight 400
+}
+
+// Academic Icons fixes
+.ai {
+  font-family: "academicons" !important;
+}
+
+// Scholar Icons fixes
+.si {
+  font-family: "scholar-icons" !important;
+}
+
+// Tabler Icons fixes
+.ti,
+.tabler-icon {
+  font-family: "tabler-icons" !important;
+}
+
+// Social icons and contact icons specific fixes
+.social-icons,
+.contact-icons,
+.social,
+.navbar-brand.social,
+.social-links {
+  font-family: inherit !important;
+}
+
+.social-icons i,
+.contact-icons i,
+.social i,
+.navbar-brand.social i,
+.social-links i {
+  font-family: inherit !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+}
+
+// Additional icon exclusions for comprehensive coverage
+[class*="icon"],
+[class*="fa-"],
+[class*="ti-"],
+[class*="ai-"],
+[class*="si-"],
+svg,
+svg *,
+.iconfont,
+.material-icons,
+.material-icons-outlined,
+.material-icons-round,
+.material-icons-sharp,
+.material-icons-two-tone {
+  font-family: inherit !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  line-height: 1 !important;
+  letter-spacing: normal !important;
+  word-wrap: normal !important;
+  white-space: nowrap !important;
+  direction: ltr !important;
+}
+
+// Theme toggle and search icon specific fixes
+#light-toggle,
+#light-toggle-system,
+#light-toggle-dark,
+#light-toggle-light,
+#search-toggle,
+.toggle-container,
+.toggle-container i,
+.toggle-container button {
+  font-family: inherit !important;
+}
+
+#light-toggle i,
+#search-toggle i,
+.toggle-container i {
+  font-family: "tabler-icons" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+}
+
+// Navigation search icon
+.nav-link i[class*="ti-"] {
+  font-family: "tabler-icons" !important;
+}
+
+// Navigation search and toggle alignment fixes
+.nav-item button {
+  background: none;
+  border: none;
+  padding: 0.75rem 1rem;
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace !important;
+  font-size: 0.9rem;
+  color: var(--global-text-color);
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-item button:hover {
+  color: var(--global-hover-color);
+}
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-container button {
+  background: none;
+  border: none;
+  padding: 0.75rem 1rem;
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace !important;
+  font-size: 0.9rem;
+  color: var(--global-text-color);
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-container button:hover {
+  color: var(--global-hover-color);
+}
+
+// Ensure search and toggle icons display properly
+#search-toggle i,
+.toggle-container i {
+  font-family: "tabler-icons" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+}
+
+// Social media icons
+.social i[class*="ai-"],
+.social i[class*="fab-"],
+.social i[class*="fa-"] {
+  font-family: "academicons", "Font Awesome 6 Brands" !important;
+}
+
+// Specific Font Awesome solid icon fixes
+.fa-solid.fa-envelope,
+.fa-solid.fa-square-rss,
+.fa-solid.fa-barcode,
+.fa-solid.fa-briefcase {
+  font-family: "Font Awesome 6 Free" !important;
+  font-weight: 900 !important;
+  font-style: normal !important;
+}
+
+// Specific overrides for better readability
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+p, div, span, li {
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+// Form elements
+input, textarea, select, button {
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace !important;
+  font-weight: 400;
+}
+
+// Code elements (already monospace, but ensure consistency)
+code, pre, kbd, samp {
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace !important;
+  font-weight: 400;
+}
+
+// Additional website-specific monospace font rules
+.post-title,
+.post-content,
+.page-title,
+.page-content,
+.about-content,
+.profile-info,
+.contact-info,
+.social-icons,
+.footer-text,
+.news-item,
+.project-title,
+.project-description,
+.publication-title,
+.publication-authors,
+.gallery-title,
+.gallery-description {
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace !important;
+}
+
+// Ensure all Bootstrap components use monospace
+.btn,
+.card,
+.modal,
+.dropdown-menu,
+.nav-tabs,
+.tab-content,
+.alert,
+.badge,
+.progress,
+.list-group {
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace !important;
+}
+
+// Font-mono styling for navigation matching reference site aesthetic
+.font-mono {
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+  font-weight: 400; // Lighter weight like reference
+  letter-spacing: -0.01em; // Tighter spacing
+  position: relative;
+  display: inline-block;
+  transition: all 0.2s ease-out; // Smooth but not too fast
+  cursor: pointer;
+  font-variant-ligatures: none;
+  font-feature-settings: "liga" 0;
+  color: var(--global-text-color);
+  
+  // Clean underline animation matching reference
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px; // Thinner line like reference
+    background: var(--global-theme-color);
+    transition: width 0.2s ease-out;
+    transform-origin: left;
+  }
+  
+  // Subtle hover effects matching reference
+  &:hover {
+    color: var(--global-theme-color);
+    
+    &::after {
+      width: 100%;
+    }
+  }
+  
+  // Active state matching reference
+  &.active {
+    color: var(--global-theme-color);
+    
+    &::after {
+      width: 100%;
+    }
+  }
+  
+  // Character shuffle animation state - minimal like reference
+  &.shuffling {
+    color: var(--global-theme-color);
+    text-shadow: 0 0 8px rgba(var(--global-theme-color-rgb), 0.3);
+  }
 }
 
 hr {
@@ -285,13 +647,22 @@ ul.task-list input[type="checkbox"] {
 
   .navbar-brand {
     color: var(--global-text-color);
+    font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace !important;
+    font-weight: 500;
   }
 
   .navbar-nav .nav-item .nav-link {
     color: var(--global-text-color);
+    position: relative;
+    padding: 0.75rem 1rem; // More padding like reference
+    transition: all 0.2s ease-out; // Smooth transitions
+    font-size: 0.9rem; // Slightly smaller text like reference
+    font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace !important;
+    font-weight: 400;
 
     &:hover {
       color: var(--global-hover-color);
+      // No transform - keeping it minimal like reference
     }
   }
 
@@ -392,6 +763,87 @@ ul.task-list input[type="checkbox"] {
 
   &:hover {
     color: var(--global-hover-color);
+  }
+}
+
+// Show mobile controls on small screens
+@media (max-width: 991px) {
+  // Hide desktop search and toggle in collapsed state
+  .navbar-collapse {
+    position: relative !important;
+    
+    .nav-item:has(#search-toggle),
+    .toggle-container {
+      display: none !important;
+    }
+  }
+  
+  // Show desktop search and toggle when dropdown is open
+  .navbar-collapse.show {
+    .nav-item:has(#search-toggle),
+    .toggle-container {
+      display: block !important;
+    }
+    
+    // Style the desktop buttons in dropdown as regular nav items
+    .nav-item:has(#search-toggle) button,
+    .toggle-container button {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 2.5rem !important;
+      height: 2.5rem !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      border: none !important;
+      background: transparent !important;
+      border-radius: 50% !important;
+      color: var(--global-text-color) !important;
+      transition: all 0.3s ease !important;
+      cursor: pointer !important;
+      margin-left: auto !important; // Push buttons to the right
+      
+      i {
+        font-size: 1.2rem !important;
+        line-height: 1 !important;
+      }
+      
+      &:hover {
+        background: rgba(0, 0, 0, 0.1) !important;
+        transform: scale(1.05) !important;
+        color: var(--global-hover-color) !important;
+      }
+    }
+    
+    // Make search and toggle containers look like regular nav items
+    .nav-item:has(#search-toggle),
+    .toggle-container {
+      margin: 0 !important;
+      padding: 0 !important;
+      text-align: right !important;
+      padding-right: 1rem !important;
+      display: flex !important;
+      justify-content: flex-end !important;
+    }
+    
+    // Ensure light toggle specifically aligns to the right
+    .toggle-container {
+      display: flex !important;
+      justify-content: flex-end !important;
+      align-items: center !important;
+    }
+    
+    // Special styling for search button in dropdown
+    .nav-item:has(#search-toggle) button {
+      .nav-link {
+        font-size: 0.8rem !important;
+        font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace !important;
+        
+        i {
+          margin-left: 0.25rem !important;
+        }
+      }
+    }
   }
 }
 
@@ -933,6 +1385,77 @@ html.transition *:after {
 
       &:hover {
         color: var(--global-theme-color);
+      }
+    }
+  }
+
+  // Gallery return button styling
+  .post-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    .post-title {
+      margin: 0;
+      flex: 1;
+      min-width: 0; // Allow title to shrink
+    }
+
+    .return-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background-color: var(--global-card-bg-color);
+      border: 1px solid var(--global-divider-color);
+      border-radius: 6px;
+      color: var(--global-text-color);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace !important;
+      font-weight: 400;
+      transition: all 0.2s ease-out;
+      white-space: nowrap;
+      flex-shrink: 0;
+
+      i {
+        font-family: "Font Awesome 6 Free" !important;
+        font-weight: 900 !important;
+        font-style: normal !important;
+        font-size: 0.8rem;
+      }
+
+      &:hover {
+        background-color: var(--global-theme-color);
+        color: var(--global-bg-color);
+        border-color: var(--global-theme-color);
+        text-decoration: none;
+        transform: translateY(-1px);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      &:active {
+        transform: translateY(0);
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+
+  // Responsive design for return button
+  @media (max-width: 768px) {
+    .post-title-container {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.75rem;
+
+      .post-title {
+        width: 100%;
+      }
+
+      .return-button {
+        align-self: flex-start;
       }
     }
   }

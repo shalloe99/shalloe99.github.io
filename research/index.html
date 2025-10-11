@@ -1,0 +1,1008 @@
+<!doctype html>
+<html lang="en">
+  <!-- Head -->
+  <head>
+    
+    <!-- Metadata, OpenGraph and Schema.org -->
+
+
+
+
+<!-- Standard metadata -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>
+  
+  
+    
+      paper | Shawn Kang
+    
+  
+</title>
+<meta name="author" content="Zengxiaoran (Shawn) Kang">
+<meta name="description" content="Research paper and presentations">
+
+  <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
+
+
+
+
+
+
+
+
+
+
+<!-- Extension Error Handler - Load early to catch extension errors -->
+<script src="/assets/js/extension-error-handler.js"></script>
+
+<!-- Bootstrap & MDB -->
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css"
+  integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw="
+  crossorigin="anonymous"
+>
+
+
+
+<!-- Fonts & Icons -->
+<link defer rel="stylesheet" href="/assets/css/academicons.min.css">
+<link defer rel="stylesheet" href="/assets/css/scholar-icons.css">
+<!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link
+  defer
+  rel="stylesheet"
+  type="text/css"
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&display=swap"
+>
+
+<!-- Code Syntax Highlighting -->
+<link
+  defer
+  rel="stylesheet"
+  href="/assets/css/jekyll-pygments-themes-github.css"
+  media=""
+  id="highlight_theme_light"
+>
+
+
+
+<!-- Styles -->
+
+
+
+
+  <link
+    rel="shortcut icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎨</text></svg>"
+  >
+
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/font-awesome-fix.css">
+<link rel="canonical" href="https://shalloe99.github.io/research/">
+
+
+  <!-- Dark Mode -->
+  <script src="/assets/js/theme.js"></script>
+  <link
+    defer
+    rel="stylesheet"
+    href="/assets/css/jekyll-pygments-themes-native.css"
+    media="none"
+    id="highlight_theme_dark"
+  >
+  <script>
+    initTheme();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  </head>
+
+  <!-- Body -->
+  <body class="fixed-top-nav ">
+    <!-- Header -->
+    <header>
+  <!-- Nav Bar -->
+  <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation">
+    <div class="container">
+      
+        <a class="navbar-brand title font-weight-lighter" href="/">
+          Shawn Kang
+        </a>
+      
+      
+      <!-- Navbar Toggle -->
+      <button
+        class="navbar-toggler collapsed ml-auto"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
+
+      <div class="collapse navbar-collapse text-right" id="navbarNav">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+          
+
+          <!-- About -->
+          <li class="nav-item ">
+            <a class="nav-link" href="/">
+              <span class="font-mono ">about.</span>
+              
+            </a>
+          </li>
+
+          <!-- Other pages -->
+          
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+                
+                <li class="nav-item ">
+                  <a class="nav-link" href="/gallery/">
+                    <span class="font-mono ">gallery.</span>
+                    
+                  </a>
+                </li>
+              
+            
+          
+            
+              
+                
+                <li class="nav-item ">
+                  <a class="nav-link" href="/projects/">
+                    <span class="font-mono ">project.</span>
+                    
+                  </a>
+                </li>
+              
+            
+          
+            
+              
+                
+                <li class="nav-item active">
+                  <a class="nav-link" href="/research/">
+                    <span class="font-mono active">paper.</span>
+                    
+                      <span class="sr-only">(current)</span>
+                    
+                  </a>
+                </li>
+              
+            
+          
+            
+              
+                
+                <li class="nav-item ">
+                  <a class="nav-link" href="/service/">
+                    <span class="font-mono ">service.</span>
+                    
+                  </a>
+                </li>
+              
+            
+          
+          
+            <!-- Search -->
+            <li class="nav-item">
+              <button id="search-toggle" title="Search" onclick="openSearchModal()">
+                <span class="nav-link">ctrl k <i class="ti ti-search"></i></span>
+              </button>
+            </li>
+          
+          
+            <!-- Toogle theme mode -->
+            <li class="toggle-container">
+              <button id="light-toggle" title="Change theme">
+                <i class="ti ti-sun-moon" id="light-toggle-system"></i>
+                <i class="ti ti-moon-filled" id="light-toggle-dark"></i>
+                <i class="ti ti-sun-filled" id="light-toggle-light"></i>
+              </button>
+            </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+    <!-- Scrolling Progress Bar -->
+    <progress id="progress" value="0">
+      <div class="progress-container">
+        <span class="progress-bar"></span>
+      </div>
+    </progress>
+  
+</header>
+
+
+    <!-- Content -->
+    <div class="container mt-5" role="main">
+      
+        
+
+<div class="post">
+  <header class="post-header">
+    <div class="post-title-container">
+      <h1 class="post-title">paper</h1>
+      
+    </div>
+    <p class="post-description">Research paper and presentations</p>
+  </header>
+
+  <article>
+    <div class="publications">
+
+<h2 class="bibliography">2022</h2>
+<ol class="bibliography"><li><div class="row">
+  
+    <div class="col col-sm-2 abbr">
+          <abbr class="badge rounded w-100">COMP</abbr>
+        
+      
+      
+    </div>
+  
+
+  <!-- Entry bib key -->
+  <div id="URS" class="col-sm-8">
+    <!-- Title -->
+    <div class="title">An Analysis on Imbalance Workload Pattern in the Cloud Cluster Trace</div>
+    <!-- Author -->
+    <div class="author">
+      
+
+      
+      
+      
+    </div>
+
+    <!-- Journal/Book title and date -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="periodical">
+      <em>Published (Institutional Repository)</em>,  Apr 2022
+    </div>
+    <div class="periodical">
+      
+    </div>
+
+    <!-- Links/Buttons -->
+    <div class="links">
+      
+      
+        <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+      
+      
+      
+      
+      
+      
+        
+          <a href="https://oaktrust.library.tamu.edu/server/api/core/bitstreams/9794dea4-371a-490b-8503-6f0ba041364f/content" class="btn btn-sm z-depth-0" role="button">PDF</a>
+        
+      
+      
+      
+      
+      
+      
+      
+      
+    </div>
+    
+      
+      
+
+      
+      
+
+      
+      
+
+      
+      
+      
+    
+
+    
+
+    
+      <!-- Hidden abstract block -->
+      <div class="abstract hidden">
+        <p>This study analyzes imbalanced workload patterns in cloud cluster traces using Google Borg data from 2011 to 2019. We use clustering algorithms and anomaly detection to identify and measure workload distribution patterns. While industry practitioners struggle with large-scale datasets and academic researchers face resource constraints, our research provides systematic methods for exploring workload scheduling patterns in compute clusters. Building on "Borg: The Next Generation," we extend the analysis with comprehensive documentation for reproducible data analysis. We demonstrate multiple data mining techniques for workload pattern analysis and establish frameworks for characterizing improvements in production traces from major cloud providers like Microsoft Azure and Alibaba.</p>
+      </div>
+    
+
+    
+
+    
+  </div>
+</div>
+</li></ol>
+<h2 class="bibliography">2021</h2>
+<ol class="bibliography"><li><div class="row">
+  
+    <div class="col col-sm-2 abbr">
+          <abbr class="badge rounded w-100">STAT</abbr>
+        
+      
+      
+    </div>
+  
+
+  <!-- Entry bib key -->
+  <div id="Fraud" class="col-sm-8">
+    <!-- Title -->
+    <div class="title">Transaction Fraud Detection using Random Forest and Logistic Regression Methods</div>
+    <!-- Author -->
+    <div class="author">
+      
+
+      
+      
+      
+    </div>
+
+    <!-- Journal/Book title and date -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="periodical">
+      <em>Unpublished manuscript</em>,  Dec 2021
+    </div>
+    <div class="periodical">
+      
+    </div>
+
+    <!-- Links/Buttons -->
+    <div class="links">
+      
+      
+        <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+      
+      
+      
+      
+      
+      
+        
+          <a href="/assets/pdf/fraud.pdf" class="btn btn-sm z-depth-0" role="button">PDF</a>
+        
+      
+      
+      
+      
+      
+      
+      
+      
+    </div>
+    
+      
+      
+
+      
+      
+
+      
+      
+
+      
+      
+      
+    
+
+    
+
+    
+      <!-- Hidden abstract block -->
+      <div class="abstract hidden">
+        <p>Digital transactions and online banking have led to a dramatic increase in financial fraud worldwide. According to TransUnion, digital fraud attempts in financial services increased by 149% globally in early 2021 compared to 2020, with U.S. fraud attempts rising by 109%. Juniper Research projects that businesses will lose over $200 billion to fraud between 2020 and 2024 across e-commerce, airline ticketing, money transfer, and banking services. As fraudsters become more sophisticated, fraud analytics has become critical for maintaining system integrity and consumer trust. This study addresses transaction fraud in banking by developing and evaluating statistical models that can classify transactions as legitimate or fraudulent based on comprehensive feature analysis and pattern recognition.</p>
+      </div>
+    
+
+    
+
+    
+  </div>
+</div>
+</li>
+<li><div class="row">
+  
+    <div class="col col-sm-2 abbr">
+          <abbr class="badge rounded w-100">STAT</abbr>
+        
+      
+      
+    </div>
+  
+
+  <!-- Entry bib key -->
+  <div id="Insurance" class="col-sm-8">
+    <!-- Title -->
+    <div class="title">A Predictive Model for Personal Medical Insurance Charge</div>
+    <!-- Author -->
+    <div class="author">
+      
+
+      
+      
+      
+    </div>
+
+    <!-- Journal/Book title and date -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="periodical">
+      <em>Capstone presentation</em>,  Dec 2021
+    </div>
+    <div class="periodical">
+      
+    </div>
+
+    <!-- Links/Buttons -->
+    <div class="links">
+      
+      
+        <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+      
+      
+      
+      
+      
+      
+        
+          <a href="/assets/pdf/insurance.pdf" class="btn btn-sm z-depth-0" role="button">PDF</a>
+        
+      
+      
+      
+      
+      
+      
+      
+      
+    </div>
+    
+      
+      
+
+      
+      
+
+      
+      
+
+      
+      
+      
+    
+
+    
+
+    
+      <!-- Hidden abstract block -->
+      <div class="abstract hidden">
+        <p>Medical insurance is essential for financial protection against illness and injury costs. However, determining insurance premiums involves complex interactions between multiple factors including demographics, health status, lifestyle, and risk assessment. This study develops a predictive modeling framework to estimate insurance charges and identify which factors most influence premium costs. We analyze a comprehensive insurance dataset from "Machine Learning with R" by Brett Lantz using JMP statistical software to examine relationships between individual characteristics and health insurance charges. The research identifies key predictors and their relative importance in premium determination, providing insights for both insurers and policyholders to understand what drives insurance costs.</p>
+      </div>
+    
+
+    
+
+    
+  </div>
+</div>
+</li>
+<li><div class="row">
+  
+    <div class="col col-sm-2 abbr">
+          <abbr class="badge rounded w-100">STAT</abbr>
+        
+      
+      
+    </div>
+  
+
+  <!-- Entry bib key -->
+  <div id="SRE" class="col-sm-8">
+    <!-- Title -->
+    <div class="title">Data Simulation and Evaluation of Variable Selection Methods using Prediction Performance and Estimation Metrics</div>
+    <!-- Author -->
+    <div class="author">
+      
+
+      
+      
+      
+    </div>
+
+    <!-- Journal/Book title and date -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="periodical">
+      <em>Unpublished manuscript</em>,  Aug 2021
+    </div>
+    <div class="periodical">
+      
+    </div>
+
+    <!-- Links/Buttons -->
+    <div class="links">
+      
+      
+        <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+      
+      
+      
+      
+      
+      
+        
+          <a href="/assets/pdf/SRE.pdf" class="btn btn-sm z-depth-0" role="button">PDF</a>
+        
+      
+      
+      
+      
+      
+      
+      
+      
+    </div>
+    
+      
+      
+
+      
+      
+
+      
+      
+
+      
+      
+      
+    
+
+    
+
+    
+      <!-- Hidden abstract block -->
+      <div class="abstract hidden">
+        <p>This simulation study compares four regression methods: forward selection, ridge regression, lasso regression, and principal component regression. We evaluate each method using three criteria: prediction accuracy, estimation performance, and variable selection effectiveness. Our data generation follows four fundamental linear regression assumptions, plus four scenarios where we violate each assumption to test robustness. We examine different parameter combinations to compare method performance across various conditions. Our analysis focuses on three main objectives: (1) comparing standard vs. violated assumption scenarios with constant sample size and covariate dimensions, (2) testing four combinations of sample size and covariate count under normal assumptions, and (3) investigating different correlation structures and coefficient distributions with constant sample size and covariate count.</p>
+      </div>
+    
+
+    
+
+    
+  </div>
+</div>
+</li></ol>
+<h2 class="bibliography">2020</h2>
+<ol class="bibliography"><li><div class="row">
+  
+    <div class="col col-sm-2 abbr">
+          <abbr class="badge rounded w-100">COMP</abbr>
+        
+      
+      
+    </div>
+  
+
+  <!-- Entry bib key -->
+  <div id="DeepFake" class="col-sm-8">
+    <!-- Title -->
+    <div class="title">Employing Ensemble Learning Techniques to Create a Modular and Updatable DeepFake Detection Model</div>
+    <!-- Author -->
+    <div class="author">
+      
+
+      
+      
+      
+    </div>
+
+    <!-- Journal/Book title and date -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="periodical">
+      <em>Unpublished manuscript</em>,  May 2020
+    </div>
+    <div class="periodical">
+      
+    </div>
+
+    <!-- Links/Buttons -->
+    <div class="links">
+      
+      
+        <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+      
+      
+      
+      
+      
+      
+        
+          <a href="/assets/pdf/DeepFake.pdf" class="btn btn-sm z-depth-0" role="button">PDF</a>
+        
+      
+      
+      
+      
+      
+      
+      
+      
+    </div>
+    
+      
+      
+
+      
+      
+
+      
+      
+
+      
+      
+      
+    
+
+    
+
+    
+      <!-- Hidden abstract block -->
+      <div class="abstract hidden">
+        <p>Since Generative Adversarial Networks (GANs) emerged, DeepFake technology has grown exponentially and become a major concern in politics and society. This growth has created many accessible GAN-based generators like ProGAN, StyleGAN, and BigGAN. Most DeepFake detection research uses monolithic Deep Neural Networks (DNNs) that try to detect forgeries from any generator with a single model. While this approach offers broad coverage, it often has limitations including reduced training efficiency and lower detection accuracy for specific generator types. We propose a modular approach using ensemble learning techniques. By developing specialized models trained for individual generator outputs, we can leverage generator-specific patterns that monolithic DNNs miss. These dedicated models are then combined through voting mechanisms to capture both general patterns and specific generator details. Our goal is to evaluate whether this modular ensemble system achieves better training efficiency than monolithic DNNs while maintaining or improving detection accuracy across different DeepFake generators.</p>
+      </div>
+    
+
+    
+
+    
+  </div>
+</div>
+</li>
+<li><div class="row">
+  
+    <div class="col col-sm-2 abbr">
+          <abbr class="badge rounded w-100">COMP</abbr>
+        
+      
+      
+    </div>
+  
+
+  <!-- Entry bib key -->
+  <div id="Chi21" class="col-sm-8">
+    <!-- Title -->
+    <div class="title">Automatically Grading Rey-Osterrieth Complex Figure Tests using Sketch Recognition</div>
+    <!-- Author -->
+    <div class="author">
+      
+
+      
+      
+      
+    </div>
+
+    <!-- Journal/Book title and date -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="periodical">
+      <em>Unpublished manuscript</em>,  May 2020
+    </div>
+    <div class="periodical">
+      
+    </div>
+
+    <!-- Links/Buttons -->
+    <div class="links">
+      
+      
+        <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+      
+      
+      
+      
+      
+      
+        
+          <a href="/assets/pdf/ROCF.pdf" class="btn btn-sm z-depth-0" role="button">PDF</a>
+        
+      
+      
+      
+      
+      
+      
+      
+      
+    </div>
+    
+      
+      
+
+      
+      
+
+      
+      
+
+      
+      
+      
+    
+
+    
+
+    
+      <!-- Hidden abstract block -->
+      <div class="abstract hidden">
+        <p>The Rey-Osterrieth Complex Figure Test (ROCF) is a widely used neuropsychological exam for assessing visual-spatial construction and memory skills in clinical settings. However, manually grading patients’ sketched figures has challenges including subjective interpretation and time-intensive evaluation. With increasing demand for automated tools to detect cognitive decline and neurological disorders, there’s a need to use sketch recognition methods to identify details within ROCF’s abstract geometric figures. We present recognition algorithms designed to detect all 18 official ROCF details using a top-down sub-shape recognition approach. This automated grading system converts hand-drawn sketches into graph representations, identifies and isolates detail sub-shapes, and validates accuracy through point-density matrix template matching. Experimental validation using hand-drawn ROCF samples shows our approach can automatically grade ROCF tests using the same standardized 18-item checklist used by neuropsychologists, achieving minimal errors and providing consistent, objective assessment for clinical applications.</p>
+      </div>
+    
+
+    
+
+    
+  </div>
+</div>
+</li></ol>
+
+</div>
+
+  </article>
+
+  
+
+</div>
+
+      
+    </div>
+
+    <!-- Footer -->
+    
+
+
+  <footer class="fixed-bottom" role="contentinfo">
+    <div class="container mt-0">
+      
+  &copy; Copyright 2025
+  Zengxiaoran (Shawn)
+  
+  Kang. Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+
+  
+  
+
+    </div>
+  </footer>
+
+
+
+    <!-- JavaScripts -->
+    <!-- jQuery -->
+<script
+  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"
+></script>
+
+<!-- Bootsrap & MDB scripts -->
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js"
+  integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA="
+  crossorigin="anonymous"
+></script>
+
+
+  <!-- Masonry & imagesLoaded -->
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+    integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI="
+    crossorigin="anonymous"
+  ></script>
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js"
+    integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc="
+    crossorigin="anonymous"
+  ></script>
+  <script defer src="/assets/js/masonry.js" type="text/javascript"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Medium Zoom JS -->
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js"
+    integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc="
+    crossorigin="anonymous"
+  ></script>
+  <script defer src="/assets/js/zoom.js"></script>
+
+
+
+
+
+
+<!-- Load Common JS -->
+<script src="/assets/js/no_defer.js"></script>
+<script defer src="/assets/js/common.js"></script>
+<script defer src="/assets/js/copy_code.js" type="text/javascript"></script>
+
+<!-- Navigation Character Shuffle Animation -->
+<script defer src="/assets/js/navigation-shuffle.js" type="text/javascript"></script>
+
+<!-- Jupyter Open External Links New Tab -->
+<script defer src="/assets/js/jupyter_new_tab.js"></script>
+
+<!-- Badges -->
+
+  <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+
+
+  <script async src="https://badge.dimensions.ai/badge.js"></script>
+
+
+
+  <!-- MathJax -->
+  <script
+    defer
+    type="text/javascript"
+    id="MathJax-script"
+    src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"
+    integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="
+    crossorigin="anonymous"
+  ></script>
+  
+    <script src="/assets/js/mathjax-setup.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"
+      crossorigin="anonymous"
+    ></script>
+  
+
+
+
+
+
+
+
+
+
+  <!-- Scrolling Progress Bar -->
+  <script defer src="/assets/js/progress-bar.js" type="text/javascript"></script>
+
+
+
+
+
+
+
+  <!-- Back to Top -->
+  <script src="/assets/js/vanilla-back-to-top.min.js"></script>
+  <script>
+    addBackToTop();
+  </script>
+
+
+
+  <!-- Search -->
+  <script type="module" src="/assets/js/search/ninja-keys.min.js"></script>
+  <ninja-keys hideBreadcrumbs noAutoLoadMdIcons placeholder="Type to start searching"></ninja-keys>
+  <script src="/assets/js/search-setup.js"></script>
+  <script src="/assets/js/search-data.js"></script>
+  <script src="/assets/js/shortcut-key.js"></script>
+
+
+
+
+  </body>
+</html>

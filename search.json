@@ -1,53 +1,341 @@
----
-layout: null
----
 [
-  {% assign first_item = true %}
-  {% for page in site.pages %}
-    {% unless page.url contains '/search.json' or page.url contains '/404.html' or page.url contains '/robots.txt' or page.url contains '.css' or page.url contains '.js' or page.url contains '.map' or page.url contains '/sitemap.xml' or page.url contains '/feed.xml' %}
-      {% unless first_item %},{% endunless %}
+  
+  
+    
+  
+    
+      
       {
-        "title": "{{ page.title | escape }}",
-        "url": "{{ page.url | relative_url }}",
-        "content": "{{ page.content | strip_html | strip_newlines | escape }}",
-        "category": "{% if page.url == '/' %}About{% elsif page.url contains '/gallery/' %}Gallery{% elsif page.url contains '/projects/' %}Projects{% elsif page.url contains '/research/' %}Research{% elsif page.url contains '/blog/' %}Blog{% elsif page.url contains '/news/' %}News{% elsif page.url contains '/service/' %}Service{% else %}Pages{% endif %}",
+        "title": "about",
+        "url": "/",
+        "content": "Hi there! I’m Zengxiaoran Kang — you can call me Shawn. I specialize in creating exceptional digital experiences, with a focus on performance, reusability, and clean, elegant code architecture. Outside of coding, I’m an avid basketball player, hiker, and artist with a deep appreciation for aesthetics.My passion for art led me to win two state-level 2D art competitions in high school, and drawing has remained a fun and rewarding hobby ever since. I’m also enthusiastic about entrepreneurship. I co-founded a startup with friends to build an AI-powered tax preparation tool — it hasn’t gone viral… yet 😊",
+        "category": "About",
         "type": "page"
       }
-      {% assign first_item = false %}
-    {% endunless %}
-  {% endfor %}
-  {% for post in site.posts %}
-    {% unless first_item %},{% endunless %}
+      
+    
+  
+    
+      ,
+      {
+        "title": "gallery",
+        "url": "/gallery/",
+        "content": "      Volo non quod peto; cogito, ergo sum; cor meum Domino meo.意为：&quot;我所愿非我所求；我思，故我在；我心归于我主。&quot;                                                                                                    Chromatic Reverie              Where architecture dreams in color                              View Details                                                                                                                                                            Realm of Gods              A triptych exploring the liminal space between order and chaos                              View Details                                                                                                                                                            Threshold of Displacement              Between shores—hope meets transformation                              View Details                                                                                                                                                            Sanctum of Azure Skies              A devotional portrait rendered in celestial blues                              View Details                                                                                                                                                            Gilded Cage              Freedom within golden bars                              View Details                                                                                                                                                            Studies in Luminosity              Light becomes architecture                              View Details                                                                                                                                                            Untamed Ambition              Harness your wild spirit                              View Details                                                                                                                                                            Euphoric Nocturne              A chromatic celebration of youth, connection, and midnight revelry                              View Details                                                                                                                                                            Tempest of Migration              The ocean as threshold between homeland and hope                              View Details                                                                                                                                                            Threshold of Madness              Where rationality confronts the abyss of cosmic dread                              View Details                                                                                                                                                            Metamorphic Wisdom              An alchemical transformation captured in flowing pigment                              View Details                                                                                                                                                            Instruments of Eloquence              Calligraphy&#39;s sacred tools                              View Details                                                                                                                                                            Evolution of Violence              A visual anthology of humanity&#39;s instruments of destruction                              View Details                                                                                                                                                            Celestial Convergence              Where firmament and ocean dissolve into unified infinity                              View Details                                                                                                                                                            Sentinel Peaks              Guardians of silence rendered in winter&#39;s austere palette                              View Details                                                                                                                                                            Genesis Light              The sacred threshold between night&#39;s surrender and day&#39;s promise                              View Details                                                                                    ",
+        "category": "Gallery",
+        "type": "page"
+      }
+      
+    
+  
+    
+  
+    
+      ,
+      {
+        "title": "project",
+        "url": "/projects/",
+        "content": "              data analysis                                                                                                                                                        ROCF            Analyze cognitive impairment                                                                                                                                                                                  Insurance predictor            An prediction model for insurance charge                                                                                                                machine learning                                                                                                                                                        Deepfake detection            Ensemble learning to detect Deepfake images                                                                                                                                                                                  Fraud Detection            Several detection models for transaction fraud                                                                                                                                                                                  Genre classifier            Classify Netflix movies and films&#39; genres                                                                                                                software design                                                                                                                                                        Elders meet            Connect the elderly in the age of loneliness                                                                                                                                                                                  database system            A graphical client-server database system                                                                                                                computer graphic                                                                                                                                                        colorful bunny            Using GLSL to draw bunnies                                                                                                                fun                                                                                                                                                        dot box game            A dot box game                                                                                                                                                                                  fast car            A music player                                                                                                            ",
+        "category": "Projects",
+        "type": "page"
+      }
+      
+    
+  
+    
+      ,
+      {
+        "title": "paper",
+        "url": "/research/",
+        "content": "2022                COMP                                      An Analysis on Imbalance Workload Pattern in the Cloud Cluster Trace                                                                                      Published (Institutional Repository),  Apr 2022                                              Abs                                                      PDF                                                                                                                                                      This study analyzes imbalanced workload patterns in cloud cluster traces using Google Borg data from 2011 to 2019. We use clustering algorithms and anomaly detection to identify and measure workload distribution patterns. While industry practitioners struggle with large-scale datasets and academic researchers face resource constraints, our research provides systematic methods for exploring workload scheduling patterns in compute clusters. Building on &quot;Borg: The Next Generation,&quot; we extend the analysis with comprehensive documentation for reproducible data analysis. We demonstrate multiple data mining techniques for workload pattern analysis and establish frameworks for characterizing improvements in production traces from major cloud providers like Microsoft Azure and Alibaba.                    2021                STAT                                      Transaction Fraud Detection using Random Forest and Logistic Regression Methods                                                                                      Unpublished manuscript,  Dec 2021                                              Abs                                                      PDF                                                                                                                                                      Digital transactions and online banking have led to a dramatic increase in financial fraud worldwide. According to TransUnion, digital fraud attempts in financial services increased by 149% globally in early 2021 compared to 2020, with U.S. fraud attempts rising by 109%. Juniper Research projects that businesses will lose over $200 billion to fraud between 2020 and 2024 across e-commerce, airline ticketing, money transfer, and banking services. As fraudsters become more sophisticated, fraud analytics has become critical for maintaining system integrity and consumer trust. This study addresses transaction fraud in banking by developing and evaluating statistical models that can classify transactions as legitimate or fraudulent based on comprehensive feature analysis and pattern recognition.                                    STAT                                      A Predictive Model for Personal Medical Insurance Charge                                                                                      Capstone presentation,  Dec 2021                                              Abs                                                      PDF                                                                                                                                                      Medical insurance is essential for financial protection against illness and injury costs. However, determining insurance premiums involves complex interactions between multiple factors including demographics, health status, lifestyle, and risk assessment. This study develops a predictive modeling framework to estimate insurance charges and identify which factors most influence premium costs. We analyze a comprehensive insurance dataset from &quot;Machine Learning with R&quot; by Brett Lantz using JMP statistical software to examine relationships between individual characteristics and health insurance charges. The research identifies key predictors and their relative importance in premium determination, providing insights for both insurers and policyholders to understand what drives insurance costs.                                    STAT                                      Data Simulation and Evaluation of Variable Selection Methods using Prediction Performance and Estimation Metrics                                                                                      Unpublished manuscript,  Aug 2021                                              Abs                                                      PDF                                                                                                                                                      This simulation study compares four regression methods: forward selection, ridge regression, lasso regression, and principal component regression. We evaluate each method using three criteria: prediction accuracy, estimation performance, and variable selection effectiveness. Our data generation follows four fundamental linear regression assumptions, plus four scenarios where we violate each assumption to test robustness. We examine different parameter combinations to compare method performance across various conditions. Our analysis focuses on three main objectives: (1) comparing standard vs. violated assumption scenarios with constant sample size and covariate dimensions, (2) testing four combinations of sample size and covariate count under normal assumptions, and (3) investigating different correlation structures and coefficient distributions with constant sample size and covariate count.                    2020                COMP                                      Employing Ensemble Learning Techniques to Create a Modular and Updatable DeepFake Detection Model                                                                                      Unpublished manuscript,  May 2020                                              Abs                                                      PDF                                                                                                                                                      Since Generative Adversarial Networks (GANs) emerged, DeepFake technology has grown exponentially and become a major concern in politics and society. This growth has created many accessible GAN-based generators like ProGAN, StyleGAN, and BigGAN. Most DeepFake detection research uses monolithic Deep Neural Networks (DNNs) that try to detect forgeries from any generator with a single model. While this approach offers broad coverage, it often has limitations including reduced training efficiency and lower detection accuracy for specific generator types. We propose a modular approach using ensemble learning techniques. By developing specialized models trained for individual generator outputs, we can leverage generator-specific patterns that monolithic DNNs miss. These dedicated models are then combined through voting mechanisms to capture both general patterns and specific generator details. Our goal is to evaluate whether this modular ensemble system achieves better training efficiency than monolithic DNNs while maintaining or improving detection accuracy across different DeepFake generators.                                    COMP                                      Automatically Grading Rey-Osterrieth Complex Figure Tests using Sketch Recognition                                                                                      Unpublished manuscript,  May 2020                                              Abs                                                      PDF                                                                                                                                                      The Rey-Osterrieth Complex Figure Test (ROCF) is a widely used neuropsychological exam for assessing visual-spatial construction and memory skills in clinical settings. However, manually grading patients’ sketched figures has challenges including subjective interpretation and time-intensive evaluation. With increasing demand for automated tools to detect cognitive decline and neurological disorders, there’s a need to use sketch recognition methods to identify details within ROCF’s abstract geometric figures. We present recognition algorithms designed to detect all 18 official ROCF details using a top-down sub-shape recognition approach. This automated grading system converts hand-drawn sketches into graph representations, identifies and isolates detail sub-shapes, and validates accuracy through point-density matrix template matching. Experimental validation using hand-drawn ROCF samples shows our approach can automatically grade ROCF tests using the same standardized 18-item checklist used by neuropsychologists, achieving minimal errors and providing consistent, objective assessment for clinical applications.                    ",
+        "category": "Research",
+        "type": "page"
+      }
+      
+    
+  
+    
+  
+    
+  
+    
+      ,
+      {
+        "title": "service",
+        "url": "/service/",
+        "content": "            Teaching Assistant              College of Engineering &amp; Department of Statistics, Texas A&amp;M University                            Aug 2021 – Dec 2021                  I was Teaching Assistant for STAT 212 Principles of Statistics II, serving 200+ students from two classes. I conducted weekly recitation sessions and office hours, graded quizzes and exams, and covered statistical fundamentals including experimental design, multiple regression, non-parametric methods, and contingency analysis.                            Jan 2019 – May 2019                  I served as a Supplemental Instructor for ENGR 102: Engineering Lab I – Computation. I designed customized worksheets, led weekly recitation and lab sessions, and hosted exam reviews. The course focused on software design, debugging, and an introduction to engineering disciplines and professional practices.                                Camp Instructor              iD Tech Camp                            May 2019 – Aug 2019                  I designed and delivered Machine Learning &amp; AI curriculum for 50+ high school students at Rice University. I covered basics for supervised learning, reinforcement learning, and convolutional neural networks through hands-on projects.                             May 2020 – Aug 2020                  I taught Python, data structures &amp; algorithms, and computer fundamentals through online instruction during the COVID-19 pandemic. I managed the classroom and leveraged virtual learning tools to sustain student engagement.                                Student Volunteer              Engineering Serving Community, Texas A&amp;M University                            Aug 2018 – Dec 2018                  We collaborated with multidisciplinary teams to develop engineering solutions that support local charities and improve access to community services. For example, I helped modernize the graphical user interface of a local food bank management system and enhanced an academic planning platform to better serve incoming students.                                Sunday School Instructor              Fort Bend Community Church                            Fall 2016 – Spring 2018                  I have facilitated weekly fellowship programs for international students, which provided cultural integration support and mentorship to help them navigate life in the United States. I also designed and delivered age-appropriate Bible lessons for elementary students, incorporating interactive activities and educational games.                     ",
+        "category": "Service",
+        "type": "page"
+      }
+      
+    
+  
+    
+  
+    
+  
+    
+  
+  
+  
+    ,
     {
-      "title": "{{ post.title | escape }}",
-      "url": "{{ post.url | relative_url }}",
-      "date": "{{ post.date | date_to_string }}",
-      "content": "{{ post.content | strip_html | strip_newlines | escape }}",
-      "category": "Blog",
-      "type": "post"
-    }
-    {% assign first_item = false %}
-  {% endfor %}
-  {% for project in site.projects %}
-    {% unless first_item %},{% endunless %}
-    {
-      "title": "{{ project.title | escape }}",
-      "url": "{{ project.url | relative_url }}",
-      "content": "{{ project.content | strip_html | strip_newlines | escape }}",
+      "title": "Deepfake detection",
+      "url": "/projects/Deepfake%20Detection/",
+      "content": "",
       "category": "Projects",
       "type": "project"
     }
-    {% assign first_item = false %}
-  {% endfor %}
-  {% for item in site.gallery %}
-    {% unless first_item %},{% endunless %}
+    
+  
+    ,
     {
-      "title": "{{ item.title | escape }}",
-      "url": "{{ item.url | relative_url }}",
-      "content": "{{ item.content | strip_html | strip_newlines | escape }}",
+      "title": "Insurance predictor",
+      "url": "/projects/Insurance/",
+      "content": "",
+      "category": "Projects",
+      "type": "project"
+    }
+    
+  
+    ,
+    {
+      "title": "database system",
+      "url": "/projects/client%20database/",
+      "content": "",
+      "category": "Projects",
+      "type": "project"
+    }
+    
+  
+    ,
+    {
+      "title": "dot box game",
+      "url": "/projects/dot-box/",
+      "content": "",
+      "category": "Projects",
+      "type": "project"
+    }
+    
+  
+    ,
+    {
+      "title": "Elders meet",
+      "url": "/projects/elders%20meet/",
+      "content": "",
+      "category": "Projects",
+      "type": "project"
+    }
+    
+  
+    ,
+    {
+      "title": "fast car",
+      "url": "/projects/fast%20car/",
+      "content": "",
+      "category": "Projects",
+      "type": "project"
+    }
+    
+  
+    ,
+    {
+      "title": "Fraud Detection",
+      "url": "/projects/fraud/",
+      "content": "",
+      "category": "Projects",
+      "type": "project"
+    }
+    
+  
+    ,
+    {
+      "title": "Genre classifier",
+      "url": "/projects/genre%20classifier/",
+      "content": "",
+      "category": "Projects",
+      "type": "project"
+    }
+    
+  
+    ,
+    {
+      "title": "colorful bunny",
+      "url": "/projects/glsl%20shader/",
+      "content": "",
+      "category": "Projects",
+      "type": "project"
+    }
+    
+  
+    ,
+    {
+      "title": "ROCF",
+      "url": "/projects/rocf/",
+      "content": "Our system uses a smartpen to automatically digitize sketches from paper. A participant draws a Rey-Osterrieth Complex Figure as they would draw on any piece of paper. The test figures produce fuzzy sketches since several lines are segmented. Participants can also draw the shape in any order they wish, combining any shapes. The sketches will be turned into undirected graph, and 18 details are recognized with automated system.IntroThe Rey-Osterrieth Complex Figure Test (ROCF) - neuropsychological test that evaluates several cognitive functions including visuospatial abilities, memory, attention, planning, working memory and executive functions. The shape is specifically designed to be abstract so that participants cannot associate it with any common object or concept. A clinician then grades all three sketches on whether 18 separate sub-shapes exist and, if they do, how neatly they were drawn. Our creation of an automated ROCF that can grade itself on the existing grading scheme.Graph CreationStep by step construction pipeline:  Corner detection by resampling to a uniform interspace with Pythagorean theorem  Corner-finding algorithm from Wolin to identify any “corner” from drawn strokes  Create undirected graph  Vertex Contraction vertices that fall below a predetermined distance threshold.GradingTo test our recognizer’s performance, the system graded 141 digitized Rey-Osterrieth tests from participants, and we compare how closely our system’s grades correlate with those of an expert grader. For healthy participants taking this test, our expert graders attributed sloppiness as a lack of effort rather than genuine memory loss if the patient has no hand motor issues. By employing graph crawling, classical vertex search, and optimization algorithms we are able to identify key sub-shapes of geometric shapes.Grading ToolsF1-Score of our recognition algorithm for each detail, and the comparison between our system’s total grade and the expert graders’ total grade. Spearman’s Rank correlation coefficient is a technique which can be used to summarise the strength and direction (negative or positive) of a relationship between two variables.PaperThe project repository is confidential. However, if you are interested in learning more, I posted the unpublished manuscript under my research work.",
+      "category": "Projects",
+      "type": "project"
+    }
+    
+  
+  
+    ,
+    {
+      "title": "Celestial Convergence",
+      "url": "/gallery/celestial-convergence/",
+      "content": "This luminous landscape dissolves the boundary between earth and heaven, creating a liminal space where sea and sky merge into a single entity. Rendered in soft, atmospheric brushwork, the composition presents a meditation on vastness—muted blues fading into pearlescent whites, suggesting that suspended moment outside time’s jurisdiction. The line between ocean and cloud becomes almost imaginary, questioning which is solid and which is vapor, which is real and which is mirror.                    Where heaven touches water in eternal, tranquil communionDrawing from Eastern landscape tradition where mist becomes as substantial as mountain, the work invites contemplation rather than interpretation. It asks nothing of the viewer except presence—the willingness to stand before vastness and acknowledge our place within it. In an age of noise and urgency, this piece offers sanctuary: a visual space where boundaries dissolve and distinctions become as ephemeral as the clouds themselves.",
       "category": "Gallery",
       "type": "gallery"
     }
-    {% assign first_item = false %}
-  {% endfor %}
+    
+  
+    ,
+    {
+      "title": "Chromatic Reverie",
+      "url": "/gallery/chromatic-reverie/",
+      "content": "Executed in vibrant oil pastels, this work captures a tranquil summer afternoon through an architectural lens. The composition dissolves structured forms into a mosaic of warm oranges, fiery reds, and cooling blues—transforming the mundane into the extraordinary. Each geometric window becomes a portal to memory, each facade a meditation on light and shadow.                    Where architecture dreams in color—the intersection of structure and reverieThe interplay of complementary hues creates a visual tension that mirrors afternoon’s duality: simultaneously languid and electric, familiar yet fleeting. Through dissolving architectural rigidity into chromatic abstraction, the work invites viewers to experience how light transforms ordinary spaces into realms of contemplation.",
+      "category": "Gallery",
+      "type": "gallery"
+    }
+    
+  
+    ,
+    {
+      "title": "Euphoric Nocturne",
+      "url": "/gallery/euphoric-nocturne/",
+      "content": "Executed in vibrant soft pastels, this kinetic composition captures the electric energy of nocturnal celebration. Bold crimson forms dominate—figures in flowing garments caught mid-movement, their gestures suggesting dance, conversation, and uninhibited joy. Powdered pigment migrates across the surface with abandon, creating atmosphere and blurring boundaries between individual and collective, much like the subjects themselves move through space.                    Where night becomes celebration—bodies in motion, spirits unboundStriped patterns create visual rhythm echoing music’s pulse, while areas of intense red suggest heat and passion. Figures emerge and dissolve, their forms suggested rather than defined—anonymous yet intimately familiar. This is not documentation but sensory translation: capturing not how the night looked, but how it felt. The piece transforms a fleeting moment of youthful exuberance into a meditation on the human need for communal joy and the delirious pleasure of being alive together.",
+      "category": "Gallery",
+      "type": "gallery"
+    }
+    
+  
+    ,
+    {
+      "title": "Evolution of Violence",
+      "url": "/gallery/evolution-of-violence/",
+      "content": "This mixed-media grid presents twelve vignettes chronicling weaponry across civilizations and epochs. Each panel employs distinct visual languages—from Egyptian hieroglyphics and geometric abstraction to realistic rendering and pop-art chromatics—creating a taxonomy of human conflict. The composition deliberately fragments its subject: an Egyptian deity beside medieval armor, ornate patterns neighbor brutalist geometry, Chinese ink painting confronts neon-colored modern firearms.                    Weaponry and warfare—where does it end?The stylistic diversity mirrors the universality of its theme: across cultures and centuries, humans have channeled creativity toward ever-more-efficient means of harm. Ancient spears required intimate proximity—killing demanded looking into another’s eyes. Modern weapons achieve distance and abstraction, the trigger pull divorced from consequence. The work poses urgent questions: Will future panels depict weapons that remove human decision entirely? Can we redirect martial innovation toward peaceful ends, or is this trajectory irreversible? The answer remains unwritten—a blank panel waiting to be filled.",
+      "category": "Gallery",
+      "type": "gallery"
+    }
+    
+  
+    ,
+    {
+      "title": "Genesis Light",
+      "url": "/gallery/genesis-light/",
+      "content": "This luminous work captures the transformative moment of dawn—that liminal space where darkness yields to radiance. Painted with lyrical, sweeping gestures, the composition presents a horizon barely visible beneath an explosion of atmospheric color: coral pinks, violet shadows, ochre warmth, and cerulean promise. Colors blend and merge without hard transitions, mimicking how dawn light seeps gradually into a receptive atmosphere rather than arriving suddenly.                    The world awakens to light&#39;s first whisper—infinite possibility born anewDawn embodies renewal made visible—each sunrise is both repetition and revelation. This particular arrangement of cloud, color, and light has never existed and will never come again. The work functions as visual metaphor for beginnings of all kinds: waking consciousness, the courage to start anew after failure, the perpetual human capacity for hope. “Genesis Light” invokes both creation mythology and daily miracle, recognizing that each dawn represents the world’s willingness to try again—a painting about second chances made manifest in light itself.",
+      "category": "Gallery",
+      "type": "gallery"
+    }
+    
+  
+    ,
+    {
+      "title": "Gilded Cage",
+      "url": "/gallery/gilded-cage/",
+      "content": "This evocative mixed-media collage captures a Japanese Shika deer behind geometric barriers, its gaze both present and distant. Constructed from layered paper circles creating an atmospheric bokeh effect, the work transforms documentary reality into philosophical meditation. The deer—mythologically revered as a forest spirit and messenger of gods—stands diminished yet dignified within its enclosure, its soft organic form contrasting with angular blue barriers that fragment our view.                    A golden cage imprisons the nature of the deer—even the forest&#39;s fairy is tamed under trammelThe piece invokes an allegorical tale: a king, enamored with a deer’s grace and freedom, captures it in a cage studded with diamonds and obsidian, assuming the deer appreciates such splendor. The work asks viewers to consider: What stops us from living authentically? The deer becomes a mirror, reflecting our own relationship with freedom and questioning whether we too appreciate our golden cages or yearn for the wilderness beyond. If we release the cage of the mind—the invisible bars of expectation, possession, and control—might we transcend limitation and exist as pure awareness?",
+      "category": "Gallery",
+      "type": "gallery"
+    }
+    
+  
+    ,
+    {
+      "title": "Instruments of Eloquence",
+      "url": "/gallery/instruments-of-eloquence/",
+      "content": "This contemplative still life presents the essential tools of Chinese calligraphy in a moment of poised anticipation. Multiple brushes rest upon pristine rice paper, their bamboo handles rendered in subtle gradations of charcoal and selective color. The composition celebrates these instruments as extensions of thought itself—bridges between inner vision and visible mark, where mastery of the brush equates to cultivation of character.                    摛翰振藻 【chī hàn zhèn zǎo】My strokes, my past, my elaborationIn Chinese tradition, calligraphy held supremacy over painting until the Song Dynasty, valued as the ultimate fusion of physical gesture, intellectual rigor, and spiritual discipline. Each brush stroke carries accumulated history—the weight of dynasties, the breath of poets, the silence of meditation. Through careful attention to light and texture, the work transforms commonplace implements into objects of reverence. The selective color on brush tips draws the eye to points of potential action—where bristle meets paper, where intention becomes reality. This is a portrait of possibility: the charged moment before creation, when the blank page holds infinite potential for eloquent expression.",
+      "category": "Gallery",
+      "type": "gallery"
+    }
+    
+  
+    ,
+    {
+      "title": "Metamorphic Wisdom",
+      "url": "/gallery/metamorphic-wisdom/",
+      "content": "Created through the spontaneous choreography of acrylic pouring, this abstract work captures geological transformation compressed into a single moment. Liquid pigment flows and mingles—black and gold converging and separating, creating organic patterns that echo mineral veins, weathered stone, and time’s patient work upon matter. The technique demands surrender: the artist sets conditions but cannot control outcomes as gravity, viscosity, and chance collaborate to create formations impossible through deliberate brushwork.                    A wise person hears one word and understands two—I perceive threeThe title invokes a proverb about wisdom—the capacity to extract multiple meanings from single observations. The layered surface mirrors this concept: what appears as simple color interaction reveals infinite detail upon closer inspection. Golden networks traverse shadowy depths; particles of white suggest stars or sediment; dark expanses evoke both void and potential. Like stone transformed by heat and pressure while retaining memory of its former state, this work speaks to the beauty of becoming—reminding us that wisdom itself is metamorphic, the capacity to see complexity within simplicity and understand that what appears finished is always transforming.",
+      "category": "Gallery",
+      "type": "gallery"
+    }
+    
+  
+    ,
+    {
+      "title": "Realm of Gods",
+      "url": "/gallery/realm-of-gods/",
+      "content": "This three-panel abstract series interprets Asgard—the celestial dwelling of Norse gods—through gestural abstraction and architectural suggestion. Each canvas presents a different vision where towering structures dissolve into atmospheric color and compositional order coexists with anarchic energy. Together, the works explore the fundamental Norse concept of innangard versus utangard: the civilized interior versus the wild exterior, suggesting boundaries between them are more permeable than mythology admits.                                                   Asgard—realm of northern legends, where order confronts the wildEach panel employs vertical architectural forms suggesting towers and spires—the “fence” separating orderly innangard from chaotic utangard. Yet these structures are unstable, their foundations dripping and dissolving, constantly threatened by energetic color fields surrounding them. Blues clash with reds; crisp whites interrupt murky shadows; geometric precision battles organic flow. The triptych creates a panoramic vision of a divine realm in perpetual tension—neither wholly ordered nor completely chaotic, but oscillating between states. The dripping paint and fractured forms hint that chaos perpetually infiltrates order, that even the gods dwell in spaces defined more by tension than triumph.",
+      "category": "Gallery",
+      "type": "gallery"
+    }
+    
+  
+    ,
+    {
+      "title": "Sanctum of Azure Skies",
+      "url": "/gallery/sanctum-of-azure-skies/",
+      "content": "Rendered in luminous oil pastels, this architectural study captures a Catholic church encountered during travels through Australia. The sacred structure rises against an impossibly vivid cerulean sky, its stone facade bearing the patina of time and faith. The artist’s gestural technique transforms solid masonry into a tapestry of light and texture, where each mark becomes an act of reverence.                    Our Father, Who art in heaven, hallowed be Thy nameThe work embodies the intersection of earthly devotion and celestial aspiration. The bell tower pierces upward, a stone arrow aimed at the divine, while flanking greenery roots the structure in the living world. Through masterful manipulation of color—from warm ochres of weathered stone to transcendent blues overhead—the piece evokes both the weight of tradition and the lightness of spiritual ascent. This artwork captures European architectural tradition reimagined beneath Southern Hemisphere skies, where ancient prayers find new resonance in unfamiliar light.",
+      "category": "Gallery",
+      "type": "gallery"
+    }
+    
+  
+    ,
+    {
+      "title": "Sentinel Peaks",
+      "url": "/gallery/sentinel-peaks/",
+      "content": "This evocative mountain landscape captures the stark majesty of alpine winter. Painted with bold, confident strokes, the composition presents a range of peaks emerging from or dissolving into atmospheric effects. The mountains command the canvas with sculptural presence, their forms suggested through masterful manipulation of value and temperature—cool blues and violets defining shadows, warm oranges implying distant sunlight on snow.                    Silent sentinels standing vigil over frozen valleys and forgotten dreamsThe work embodies both power and solitude. These peaks have witnessed millennia pass—civilizations rise and fall in the valleys below while they remain unchanged, patient, indifferent. The artist captures not just their physical presence but their psychological weight: mountains as symbols of permanence in a transient world, of stability amid chaos, of nature’s supremacy over human ambition. The crescent moon, barely visible in the sky, marks either dawn or dusk—those liminal hours when light transforms landscape into something beyond the merely visual. The peaks stand simultaneously forbidding and inviting, isolating and protective—silent witnesses to whatever courage brings travelers to cross their frozen valleys.",
+      "category": "Gallery",
+      "type": "gallery"
+    }
+    
+  
+    ,
+    {
+      "title": "Studies in Luminosity",
+      "url": "/gallery/studies-in-luminosity/",
+      "content": "This masterful charcoal still life captures the ephemeral dance of light across glass and metal surfaces. Through the deliberate absence of color, the work isolates the fundamental language of illumination—exploring how light reveals form, creates depth, and transforms mundane objects into subjects of contemplation. The arrangement features an intricate cut-glass vessel whose faceted surfaces fragment and multiply light, creating a crystalline constellation of highlights and shadows, while smooth metallic forms capture distorted impressions and draped fabric introduces organic softness.                    Where light becomes architecture—a meditation on reflection and refractionWorking exclusively in charcoal allows intimate exploration of value relationships. Each mark becomes intentional: decisive darkness defining metal’s edge, subtle gradations suggesting glass transparency, soft smudging evoking textile texture. The monochromatic palette strips away distraction, asking viewers to see not objects, but the light that makes objects visible. This is classical realism reimagined—not merely technical demonstration, but philosophical inquiry revealing the poetry inherent in light’s interaction with the material world.",
+      "category": "Gallery",
+      "type": "gallery"
+    }
+    
+  
+    ,
+    {
+      "title": "Tempest of Migration",
+      "url": "/gallery/tempest-of-migration/",
+      "content": "This powerful oil painting captures the ocean in tumultuous motion—waves cresting and colliding beneath ominous skies. The composition divides between darkness and light: on the left, storm clouds gather in midnight blacks; on the right, golden warmth suggests distant shores or breaking dawn. Between these polarities, the sea churns with primal force, its white-capped waves rendered in bold, gestural strokes.                    Islanders&#39; migration and the oceans: From hopes to fears?For island communities, the ocean embodies profound duality—simultaneously barrier and bridge, prison and passage, threat and promise. This work explores the psychological landscape of migration: the churning anxiety of leaving familiar shores, the violent uncertainty of crossing, the distant beacon of possibility that may or may not deliver. Each wave might represent a decision, a doubt, a desperate hope. The contrast between dark and light quadrants suggests the binary nature of choice: stay or go, known or unknown, security or opportunity. The work asks: For those who must cross such waters—literally or figuratively—is the ocean a path toward dreams fulfilled, or a realm where hopes are dashed? The answer, like the sea itself, remains in constant, unsettled motion.",
+      "category": "Gallery",
+      "type": "gallery"
+    }
+    
+  
+    ,
+    {
+      "title": "Threshold of Displacement",
+      "url": "/gallery/threshold-of-displacement/",
+      "content": "In this poignant mixed-media work, a weathered wooden vessel lists precariously in turbulent waters, its red lifeline stretching taut against the impossibility of staying afloat. The boat—caught between verdant shores and azure depths—becomes a powerful metaphor for the immigrant experience, laden with invisible burdens that threaten to drag it under. The composition’s textured layers mirror the complexity of cultural transition: above, weathered debris suggests remnants of what was left behind; below, deep blue waters represent both promise and peril.                    Between shores—where hope meets the weight of transformationThe phrase “fresh off the boat” transforms from colloquialism to visual poetry—this vessel embodies the precarious position of those suspended between worlds, bearing the ballast of adaptation while seeking the thread that might pull them to safety. Through mixed media combining oil pastels with tactile elements, the work captures not just the visual reality of displacement, but its emotional texture: the roughness of starting over, the fragility of new beginnings, and the courage required to weather the crossing. The lifeline offers no guarantee—only the possibility of connection and the hope of reaching solid ground.",
+      "category": "Gallery",
+      "type": "gallery"
+    }
+    
+  
+    ,
+    {
+      "title": "Threshold of Madness",
+      "url": "/gallery/threshold-of-madness/",
+      "content": "This haunting mixed-media composition juxtaposes two archetypal figures: above, a screaming face rendered in anguished distortion—mouth agape, features melting into abstraction; below, a contemplative masculine form representing the fortress of rational thought. Between them, geometric explosions of color suggest the shattering moment when logic can no longer contain existential terror.                    Scream, humans—Cthulhu is watching from the deepDrawing from Munch’s existential anxiety and Lovecraft’s cosmic horror, the work explores what happens when the mind encounters forces beyond comprehension. The screaming figure has crossed that threshold into madness; the rational figure below maintains his vigil, imposing order through reason and strength. Yet the crystalline shards that fragment the composition reveal this barrier is permeable—the work captures Lovecraft’s moment when the veil lifts and one glimpses existence as vast, indifferent, and utterly beyond human understanding.",
+      "category": "Gallery",
+      "type": "gallery"
+    }
+    
+  
+    ,
+    {
+      "title": "Untamed Ambition",
+      "url": "/gallery/untamed-ambition/",
+      "content": "This dynamic watercolor study captures the intimate moment between cowboy and steed—a relationship built on mutual respect, controlled power, and shared purpose. The pale horse, bridled and ready, embodies latent energy waiting to be directed. Its companion, rendered in shadow, suggests the duality of human nature: the civilized self alongside the wild spirit yearning to break free.                    Wild, wild the west—harness the best within yourselfThe composition speaks to a fundamental tension: the comfort of complacency versus the courage required for pursuit. The harnessed horse becomes metaphor for disciplined ambition—not the wild, directionless gallop, but focused power of intention channeled toward purpose. The bridle represents not oppression but direction; the saddle not burden but readiness. This piece urges the viewer: be a wild horse, yes—but one that sets off at a blistering pace toward meaningful horizons. True fulfillment comes not from ease but from the exhilarating pursuit of what we’re capable of becoming. The question remains: will you stay in the paddock, or will you ride?",
+      "category": "Gallery",
+      "type": "gallery"
+    }
+    
+  
 ]
